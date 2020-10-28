@@ -1,0 +1,30 @@
+<div class="col-md-3" *ngFor="let game of games">
+    <div class="card text-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between aling-items-center">
+            {{ game.title }}
+            <!-- <button class="btn btn-danger" (click) = "deleteGame(game.ID)"> 
+                <i class="fas fa-trash"></i>
+            </button> -->
+        </div>
+        <a [routerLink] = "['/games/edit', game.ID]">
+            <img [src]="game.cover" class="card-img-top" alt="">
+        </a>
+        
+        <!-- <div class="card-body">
+            <a [routerLink] = "['/games/edit', game.ID]">
+                <i class="fas fa-plus-square"></i>
+                    Más
+            </a>
+                | 
+            <a  href="{{ game.url_download }}">
+                <i class="fas fa-chevron-circle-down"></i>
+                    Descargar
+            </a>
+
+        </div>
+        <div class="card-body text-justify">
+            Autor: <br>{{ game.author }}
+        </div> -->
+
+    </div>
+</div>

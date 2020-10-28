@@ -1,0 +1,71 @@
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-body">
+                            
+            <label class="col-sm-3">Titulo:</label><br>
+            <label name="title" placeholder="Title"></label>
+                <label class="col-sm-12">
+                    {{ game.title }}
+                </label>
+            <br><br>
+            <hr>
+            
+            <label class="col-sm-3">Autor:</label><br>
+            <label name="author" placeholder="author" ></label>
+                <label class="col-sm-12">
+                    {{ game.author }}
+                </label>
+            <br><br>
+            <hr>
+
+            <label class="col-sm-3">Contenido:</label><br>
+                <label class="col-sm-12 ">
+                    {{ game.content }}
+                </label>
+            <br><br>
+            <hr>
+
+            <div class="col-sm-3">Corto:</div><br>
+                    <div class="col-sm-12 text-justify">
+                        {{ game.content_short }}
+                    </div>
+            <br><br>
+            <hr>
+
+            <div class="row p-4">
+
+                <div class="col-md-3">
+                    <i class="far fa-calendar fa-2x"></i>
+                    Fecha: {{ game.publisher_date }}
+                </div>
+
+                <div class="col-md-3">
+                    <i class="far fa-book fa-2x"></i>
+                    Hojas: {{ game.pages }}
+                </div>
+
+                <div class="col-md-4">
+                    <i class="far fa-globe-asia fa-2x"></i>
+                    Idioma: {{ game.language }}
+                </div>
+            </div>
+            <hr>
+        
+            <a class="btn btn-success btn-block" href="{{ game.url_download }} ">
+                Descargar
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="col md-4">
+    <div class="card card-body text-center">
+        <img [src]="game.cover == '' ? '/assets/noimage.png' : game.cover"class="card-img-top">
+        <h3>
+            {{ game.ID }} | {{ game.title =='' ? 'Game Title' : game.title }}
+        </h3>
+        <p>{{ game.author == '' ? 'Escribe una author' : game.author }} </p>
+        <p>{{ game.created_at | date: 'dd-WW-y' }}</p>
+    </div>
+</div>
