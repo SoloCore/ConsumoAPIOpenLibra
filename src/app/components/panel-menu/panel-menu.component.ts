@@ -15,7 +15,7 @@ export class PanelMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCategories();
-    this.getSubCategories();
+    // this.getSubCategories();
   }
 
   getCategories() {
@@ -36,7 +36,6 @@ export class PanelMenuComponent implements OnInit {
       },
       err => console.error(err)
     )
-
   }
 
 }

@@ -1,18 +1,5 @@
-
-
 <ul class="list-group" *ngFor="let category of categories">
-
-        <li class="list-group-item">{{ category.name }}
-        
-            <ul *ngFor="let subCategorie of subCategories">
-                <a ngIf="category.nicename == subCategorie.nicename" href="games/{{ subCategorie.nicename }}"> {{ subCategorie.name }} </a>
-            </ul>
-
-        </li>
-        
+    <li class="list-group-item">
+        <a href="games/{{ category.nicename }}"> {{ category.name }} </a>        
+    </li>
 </ul>
-        <!-- <li class="list-group-item"><a (click)="select.getCategory()"> {{ category.name }} </a></li> -->
-        <!-- <li class="list-group-item"><a [routerLink] = "['/games/', category.nicename]"> {{ category.name }} </a></li> -->
-
-        <!-- <li class="list-group-item"><a routerLink="/games/{{ category.nicename }}"> {{ category.name }} </a></li> -->
- 
